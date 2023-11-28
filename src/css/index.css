@@ -1,0 +1,288 @@
+body{
+    background: rgb(234,238,249);
+}
+.content{
+    width:100%;
+}
+.banner{
+    width:100%;
+    height:800px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(/src/assets/banner/banner02.png);
+    background-size: cover;
+    background-position:center;
+}
+.intro{
+    color:white;
+    width:100%;
+    box-sizing: border-box;
+    position: absolute;
+    top:270px;
+    padding:0 50px;
+}
+.intro h1{
+    font-size: 66px;
+    margin:0;
+}
+.intro h2{
+    font-size: 56px;
+    margin:10px 0;
+    text-align: right;
+}
+.producttitle{
+    width:100%;
+    box-sizing: border-box;
+    padding:60px 64px;
+}
+.title{
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+.subtitle{
+    font-size: 16px;
+    font-weight: bold;
+}
+.productc{
+    width:100%;
+    box-sizing: border-box;
+    position: relative;
+    padding:0 64px;
+}
+.leftline{
+    height:100%;
+    width:64px;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.lefttip{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    transform-origin: center;
+    writing-mode:vertical-lr;
+    position: absolute;
+    top:250px;
+    right:10px;
+    color:#666;
+    transform: translateY(-50%);
+}
+.rightc{
+
+}
+.product{
+    height:500px;
+    display: flex;
+}
+.productpic{
+    height:500px;
+    width:500px;
+    overflow: hidden;
+    position: relative;
+}
+.ppic{
+    width:600px;
+    height:600px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left:-300px;
+    margin-top:-300px;
+}
+.producttable{
+    position:absolute;
+    height:500px;
+    top:250px;
+    left:50%;
+}
+.line{
+    display: flex;
+    justify-content: flex-start;
+    opacity: 0.3;
+}
+.productname{
+    font-size: 56px;
+    font-weight: bold;
+}
+.productlist{
+    width:100%;
+    box-sizing: border-box;
+    padding: 0 64px;
+    margin-top:75px;
+}
+.listtitle{
+    font-size: 18px;
+    font-weight: bold;
+    height:70px;
+    line-height: 70px;
+    border-bottom: 1px solid #666;
+}
+.pline{
+    font-size: 14px;
+    line-height: 70px;
+    display: flex;
+    border-bottom: 1px solid #666;
+}
+.sid{
+    width:100px;
+    font-weight: bold;
+}
+.pname{
+    width:260px;
+}
+.names{
+
+}
+.aboutus{
+    width:100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding:160px 60px;
+    position:relative;
+    color:white;
+    margin-top:70px;
+    background-image: url(/src/assets/banner/banner03.png);
+    background-size: cover;
+    background-position: center;
+}
+.abtitle{
+    margin-bottom: 160px;
+}
+.abcontent{
+    width:100%;
+    box-sizing: border-box;
+    padding:0 50px;
+}
+.abcontent p{
+    text-indent: 2em;
+    max-width: 1000px;
+}
+.history{
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.paddinglr{
+    margin:100px 0;
+    padding:0 60px;
+}
+.hispic{
+    width:100%;
+}
+.hispic>img{
+    width:100%;
+    height:auto;
+}
+.contact{
+    position: relative;
+    height:600px;
+    overflow: hidden;
+}
+.contactinfo{
+    font-size: 16px;
+    position: absolute;
+    left:60px;
+    bottom:10px;
+}
+.cline{
+    margin-top:16px;
+}
+.clabel{
+    font-weight: bold;
+}
+.contactpic{
+    position: absolute;
+    height:100%;
+    top:0;
+    right:0;
+    z-index: -1;
+}
+.contactpic>img{
+    height:100%;
+    width:auto;
+}
+
+@media screen and (max-width:1200px) {
+    .productname{
+        font-size: 46px;
+    }
+}
+@media screen and (max-width:1100px) {
+    .ppic{
+        width:500px;
+        height:500px;
+        margin-top:-250px;
+        margin-left:-360px;
+    }
+    .contactpic{
+        opacity: 0.2;
+    }
+    .pline{
+        line-height: 50px;
+    }
+    .sid{
+        width:80px;
+        flex-shrink: 0;
+    }
+    /* .contactpic>img{
+        width:120%;
+        height:auto;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    } */
+}
+@media screen and (max-width:800px) {
+    .intro{
+        padding:0 20px;
+    }
+    .lefttxt{
+        margin-bottom:30px;
+    }
+    .intro h1{
+        font-size: 46px;
+        margin:0;
+        text-align: center;
+    }
+    .intro h2{
+        font-size: 38px;
+        margin:5px 0;
+        text-align: center;
+    }
+    .title{
+        font-size: 33px;
+        margin:10px 0;
+    }
+    .subtitle{
+        font-size: 14px;
+    }
+    .pline{
+        line-height: 40px;
+    }
+    .sid{
+        width:40px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    .pname{
+        width:160px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .abtitle{
+        margin-bottom:60px;
+    }
+    .abcontent{
+        padding:0;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .pline{
+        line-height: 30px;
+    }
+}
