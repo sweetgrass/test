@@ -1,0 +1,255 @@
+body{
+    background: rgb(234,238,249);
+}
+:root{
+    --padding:160px;
+}
+.nopadding{
+    padding:0;
+}
+.banc{
+    width:100%;
+    height:400px;
+    box-sizing: border-box;
+    padding:0 var(--padding);
+    background-image: url(/src/assets/banner/banner03.png);
+    background-size: cover;
+    background-position:center;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bannertitle{
+    color:white;
+}
+.title{
+    font-size: 66px;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+.subtitle{
+    font-size: 16px;
+    font-weight: bold;
+}
+.topmenu{
+    width:100%;
+    height:140px;
+    box-sizing: border-box;
+    padding:0 var(--padding);
+    position: absolute;
+    left:0;
+    bottom:-30px;
+}
+.menu{
+    width:100%;
+    height:100%;
+    background:rgb(229,233,245);
+    box-sizing: border-box;
+    padding:0 60px;
+    box-shadow: 15px 30px 20px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+.menuitem{
+    color:rgb(24,36,58);
+    width:130px;
+}
+.micn{
+    width:100%;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+.mien{
+    width:100%;
+    text-align: center;
+    font-size: 12px;
+}
+.breifc{
+    width:100%;
+    padding:0 var(--padding);
+    box-sizing: border-box;
+    /* display: flex;
+    justify-content: center; */
+}
+.breif{
+    width:100%;
+    box-sizing: border-box;
+    margin:100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 15px 30px 20px rgba(0,0,0,0.1);
+}
+.breif>div{
+    width:50%;
+}
+.brtxt{
+    box-sizing: border-box;
+    padding:20px 30px;
+    background: rgb(49,56,85);
+    color:#eee;
+    min-height: 400px;
+}
+.brtitle{
+    display: flex;
+    line-height: 60px;
+    margin-bottom: 60px;
+}
+.tcn{
+    font-size: 24px;
+    border-bottom: 2px solid #eee;
+    margin-right:10px;
+}
+.ten{
+    font-size: 20px;
+}
+.maintxt{
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 4px;
+}
+
+.breif1{
+    margin:0;
+    box-shadow: none;
+}
+.brtxt1{
+    box-sizing: border-box;
+    padding-left: var(--padding);
+}
+.linetxt{
+    width:100%;
+}
+.brtxt2{
+    background: none;
+    color:rgb(22,35,71);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.mediaf{
+    height:300px;
+    background-image: url(/src/assets/banner/banner04.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    color:white;
+    align-items: center;
+}
+.news{
+    width:100%;
+    box-sizing: border-box;
+    padding:0 var(--padding);
+}
+.newsheader{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin:50px 0;
+}
+.newsheader>div{
+    margin:0 10px;
+    height:40px;
+    line-height: 40px;
+}
+.newsheader>div:nth-child(2){
+    font-size: 20px;
+    margin-top: 3px;
+}
+.newsc{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.newnode{
+    width:300px;
+    cursor:pointer;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.1);
+    transition: all .3s;
+}
+.newpic{
+    width:100%;
+    height:200px;
+    position: relative;
+}
+.newpic>img{
+    width:100%;
+    height:auto;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+.newtitlec{
+    width:100%;
+    height:80px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newtitle{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left:20px;
+}
+.newtip{
+    font-size: 12px;
+    width:80px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.newbc{
+    width:100%;
+    height:120px;
+    box-sizing: border-box;
+    padding:20px;
+    font-size: 12px;
+    position: relative;
+}
+.ndate{
+    position: absolute;
+    left:20px;
+    bottom:15px;
+}
+.newnode:hover{
+    transform: scale(1.1);
+}
+.newnode:hover .newtitlec{
+    color:white;
+}
+.newnode:hover .newtitlec{
+    background:rgb(7,15,51);
+}
+.newnode:hover .newtip{
+    background:rgb(70,98,171);
+}
+.newnode:hover .newbc{
+    border-bottom: 8px solid rgb(70,98,171);
+}
+.newnode:hover .ndate{
+    bottom:7px;
+}
+.honors{
+    width:100%;
+    height:500px;
+    margin:100px 0;
+    background:rgb(70,98,181);
+}
+.equipments{
+    height:800px;
+    width:100%;
+    background:#ccccdd;
+}
+@media screen and (max-width:1200px) {
+    :root{
+        --padding:60px;
+    }
+}

@@ -29,7 +29,7 @@ function addBG(e) {
     setTimeout(() => {
         let hd = document.getElementById('header');
         if (document.documentElement.scrollTop != 0) {
-            hd.style.background = 'rgba(0,0,0,0.3)'
+            hd.style.background = 'rgba(24, 39, 69, 0.6)'
         }
         else {
             hd.style.background = 'none'
