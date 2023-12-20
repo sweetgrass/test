@@ -75,34 +75,48 @@ const pu = e => {
 };
 let dragid = null
 let timeline = [
-    { time: '2002', t: 0.089 },
+    { time: '2002', t: 0.125 },
     { time: '2004', t: 0.25 },
-    { time: '2005', t: 0.4 },
-    { time: '2012', t: 0.45 },
-    { time: '2016', t: 0.6 }
+    { time: '2005', t: 0.375 },
+    { time: '2012', t: 0.5 },
+    { time: '2016', t: 0.625 },
+    { time: '2017', t: 0.75 },
+    { time: '2020', t: 0.875 },
 ]
+setHis(0.135)
 const pm = e => {
+    console.log(e);
     if (isdrag) {
-        let sx = e.screenX;
+        let sx = e.screenX||e.changedTouches[0].screenX;
         let p = sx / window.innerWidth;
-        if (p > 0.07 && p < 0.93) {
-            mvc.style.left = p * 100 + '%';
-            for (let i = 0; i < timeline.length; i++) {
-                let n = timeline[i]
-                let bt = 0.6;
-                // let st = 'none';
-                if (Math.abs(p - n.t) < 0.025) {
-                    bt = 1;
-                    // st = 'block'
-                }
-                document.getElementById(n.time).style.filter = `brightness(${bt})`;
-                // document.getElementById(n.time+'t').style.display = st;
+        setHis(p)
+    }
+}
+function setHis(p){
+    if (p > 0.125 && p < 0.875) {
+        mvc.style.left = p * 100 + '%';
+        for (let i = 0; i < timeline.length; i++) {
+            let n = timeline[i]
+            let bt = 0.75;
+            // let st = 'none';
+            if (Math.abs(p - n.t) < 0.0625) {
+                bt = 1;
+                // st = 'block'
             }
-
+            document.getElementById(n.time).style.filter = `brightness(${bt})`;
+            document.getElementById(n.time).style.width = bt==1?'440px':'410px';
+            document.getElementById('line'+n.time).style.opacity = bt==1?0:1;
+            document.getElementById(n.time+'t').style.fontSize = bt==1?'30px':'25px';
+            document.getElementById(n.time+'t').style.fontWeight = bt==1?900:500;
+            
         }
+
     }
 }
 hisc.addEventListener('pointerdown', pd)
+hisc.addEventListener('touchstart', pd)
 hisc.addEventListener('pointermove', pm, { passive: true })
+hisc.addEventListener('touchmove', pm, { passive: true })
 hisc.addEventListener('pointerup', pu)
+hisc.addEventListener('touchend', pu)
 window.addEventListener('pointerup', pu)
